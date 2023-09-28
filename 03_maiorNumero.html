@@ -6,16 +6,22 @@
     No final, apresente o maior número informado pelo usuário.
     */
 
-    //ENTRADA
-    //ENTRADA
-    let numeroMaior = 0;
-    let numeros = [];
+//ENTRADA
+let numeroMaior = 0;
     //PROCESSAMENTO
     for (let contador = 1; contador <= 5; contador++) {
-        const pergunta = Number(prompt(`Informe o ${contador}° número:`));
-        if (isNaN(pergunta)) {
-            
+        const pergunta = parseFloat(prompt(`Informe o ${contador}° número:`));
+        if (!isNaN(pergunta) && pergunta > numeroMaior) {
+            numeroMaior = pergunta;
         }
+    }
+
+    if (numeroMaior != 0) {
+        document.write(`O maior número é ${numeroMaior}`);
+    }
+
+    else {
+        document.write("Valor inválido");
     }
     //SAÍDA
 </script>

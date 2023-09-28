@@ -6,11 +6,19 @@
     */
 
     //ENTRADA
-
-
+    const numero = parseFloat(prompt("Informe um número"));
     //PROCESSAMENTO
 
-
+    function numeroPrimo(numero) {
+        for (let i = 2; i < numero; i++) {
+            if (numero % i === 0) {
+                return false;
+            }
+        }
+        return numero !== 1;
+ 
+    }
+    document.write(numeroPrimo(5))
     //SAÍDA
 
 </script>
