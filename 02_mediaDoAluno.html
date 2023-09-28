@@ -8,13 +8,14 @@
 
     //ENTRADA
     const quantiaNotas = Number(prompt("Informe quantas notas o aluno teve:"));
-    let quantidadeNotas = [ , , ];
+    let soma = 0;
     //PROCESSAMENTO
-    for (let contador = 0; contador == quantiaNotas; contador++) {
-        const notas = prompt("Informe quais são as notas");
-        const media = (notas + notas + notas) / quantiaNotas ;
-        document.write(`A média é ${media}.`)
+    for (let contador = 1; contador <= quantiaNotas; contador++) {
+            const notas = Number(prompt("Informe quais são as notas"));
+            soma += notas;
     }
+    const media = soma / quantiaNotas;
+    document.write(`A média é ${media.toFixed(2)}.`);
 
     //SAÍDA
 
