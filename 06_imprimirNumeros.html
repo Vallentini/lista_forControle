@@ -6,11 +6,26 @@
     */
 
     //ENTRADA
-
-    
+    const numeroInicial = parseInt(prompt("Digite o número inicial:"));
+    const numeroFinal = parseInt(prompt("Digite o número final:"));   
     //PROCESSAMENTO
+     if (numeroInicial < numeroFinal) {
+        document.write("<p>Números ímpares entre " + numeroInicial + " e " + numeroFinal + ":</p>");
+        for (let contador = numeroInicial; contador <= numeroFinal; contador++) {
+            if (contador % 2 !== 0) {
+                document.write(contador + ", ");
+            }
+        }
 
-    
+        document.write("<p>Números pares entre " + numeroInicial + " e " + numeroFinal + ":</p>");
+        for (let contador = numeroInicial; contador <= numeroFinal; contador++) {
+            if (contador % 2 === 0) {
+                document.write(contador + ", ");
+            }
+        }
+    } else {
+        document.writ("<p>Erro: O número inicial deve ser menor que o número final.</p>");
+    }
     //SAÍDA
 
 </script>

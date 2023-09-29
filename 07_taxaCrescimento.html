@@ -6,11 +6,17 @@
     */
 
     //ENTRADA
-
-    
+    let popAtual = 80000;
+    const popdpsdeAnos = 200000;
+    const taxa = 0.03;
+    let anos; 
     //PROCESSAMENTO
+    for (anos = 0; anos < popdpsdeAnos; anos++) {
+        anos = 200000 / (popAtual * taxa);
+    }
 
-    
+    document.write("Serão necessários " + anos.toFixed(0) + " anos para atingir " + popdpsdeAnos + " habitantes.");
+
     //SAÍDA
 
 </script>

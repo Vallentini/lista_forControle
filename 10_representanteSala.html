@@ -8,7 +8,38 @@
     */
 
     //ENTRADA
+    const candidatos = [];
 
+    for (let contador = 1; contador <= 3; contador++) {
+        const nomeCandidato = prompt("Digite o nome do candidato " + contador + ":");
+        candidatos.push({
+            nome: nomeCandidato,
+            votos: 0
+        });
+    }
+
+    const quantidadeVotantes = parseInt(prompt("Digite a quantidade de alunos votantes:"));
+
+    for (let contador = 1; contador <= quantidadeVotantes; contador++) {
+        const voto = parseInt(prompt("Digite o número do candidato que deseja votar (1, 2 ou 3):"));
+
+        if (voto >= 1 && voto <= 3) {
+            candidatos[voto - 1].votos++;
+        } else {
+            alert("Voto inválido! Por favor, vote em um dos candidatos (1, 2 ou 3).");
+            contador--; 
+        }
+    }
+
+    // Apresentar o resultado da votação
+    console.log("Resultado da votação:");
+
+    for (let contador = 0; contador < candidatos.length; contador++) {
+        const candidato = candidatos[contador];
+        const porVotos = (candidato.votos / quantidadeVotantes) * 100;
+
+        document.write(candidato.nome + ": " + candidato.votos + "  votos (" + porVotos.toFixed(2) + "%) ");
+    }
 
     //PROCESSAMENTO
 

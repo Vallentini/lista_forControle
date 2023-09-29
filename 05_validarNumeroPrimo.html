@@ -6,19 +6,29 @@
     */
 
     //ENTRADA
-    const numero = parseFloat(prompt("Informe um número"));
-    //PROCESSAMENTO
+    const numero = parseInt(prompt("Digite um número:"));
 
+    //PROCESSAMENTO
     function numeroPrimo(numero) {
-        for (let i = 2; i < numero; i++) {
-            if (numero % i === 0) {
+        if (numero <= 1) {
+            return false;
+        }
+
+        for (let contador = 2; contador <= Math.sqrt(numero); contador++) {
+            if (numero % contador === 0) {
                 return false;
             }
         }
-        return numero !== 1;
- 
+
+        return true;
     }
-    document.write(numeroPrimo(5))
+
+    if (numeroPrimo(numero)) {
+        document.write(numero + " é um número primo.");
+    } else {
+        document.write(numero + " não é um número primo.");
+    }
+   
     //SAÍDA
 
 </script>

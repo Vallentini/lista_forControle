@@ -1,13 +1,21 @@
+<meta charset="UTF-8">
 <script>
     /*
     PROBLEMA: Investimentos
     Joãozinho investiu R$ 1.000,00 e o investimento renderá 2% por dia útil. Quantos dias demorará para que Joãozinho consiga o total de R$ 2.000,00.
     */
 
-    //ENTRADA
-
-
+    const valorInicial = 1000;
+    const valordpsDias = 2000;
+    const taxa = 0.02;
     //PROCESSAMENTO
+    let valorAtual = valorInicial 
+    let AlcancarmetaDias = 0;
+    for (; valorAtual < valordpsDias; AlcancarmetaDias++) {
+        valorAtual += valorAtual * taxa;
+    }
+
+    document.write("Serão necessários " + AlcancarmetaDias + " dias para atingir " + valordpsDias + ".");
 
 
     //SAÍDA

@@ -6,10 +6,26 @@
     */
 
     //ENTRADA
-
-    
+    const popAtual = 50000;
+    const taxa = 0.015
     //PROCESSAMENTO
-    
+
+    document.write("População prevista para 5 anos:");
+
+    let pop5Anos = popAtual;
+    for (let anos = 1; anos <= 5; anos++) {
+        pop5Anos += pop5Anos * taxa;
+        document.write(" Ano " + anos + "º: " + Math.round(pop5Anos) + ", ");
+    }
+
+    document.write("População prevista para 10 anos:");
+
+    let pop10Anos = popAtual;
+    for (let anos = 1; anos <= 10; anos++) {
+        pop10Anos += pop10Anos * taxa;
+        document.write(" Ano " + anos +"º: " + Math.round(pop10Anos) + ", ");
+    }
+
 
     //SAÍDA
 

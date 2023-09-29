@@ -6,11 +6,15 @@
     */
 
     //ENTRADA
-
-
+    const quantiaNotas = 5;
+    let soma = 0;
     //PROCESSAMENTO
-
-
+    for (let contador = 1; contador <= quantiaNotas; contador++) {
+            const notas = Number(prompt("Informe quais são as notas").replace(",","."));
+            soma += notas;
+    }
+    const media = soma / quantiaNotas;
+    document.write(`A média é ${media.toFixed(2).replace(".",",")}, e a soma é ${soma}.`);
     //SAÍDA
 
 </script>
